@@ -48,12 +48,14 @@ export GS_LDFLAGS="\
 -s INITIAL_MEMORY=67108864 \
 -s ALLOW_MEMORY_GROWTH=1 \
 -s EXPORTED_RUNTIME_METHODS='[\"callMain\",\"FS\",\"NODEFS\",\"WORKERFS\",\"ENV\"]' \
--s INCOMING_MODULE_JS_API='[\"noInitialRun\",\"noFSInit\",\"locateFile\",\"preRun\",\"instantiateWasm\"]' \
+-s INCOMING_MODULE_JS_API='[\"noInitialRun\",\"noFSInit\",\"locateFile\",\"preRun\",\"instantiateWasm\",\"print\",\"printErr\"]' \
 -s NO_DISABLE_EXCEPTION_CATCHING=1 \
 -s MODULARIZE=1 \
+-s EXPORT_ES6=1 \
+-s EXPORT_NAME="gs" \
 "
 emmake make \
-  XE=".js" \
+  XE=".mjs" \
   LDFLAGS="$LDFLAGS $GS_LDFLAGS" \
   -j install
 

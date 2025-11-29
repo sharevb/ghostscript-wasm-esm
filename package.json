@@ -1,19 +1,22 @@
 {
-  "name": "@jspawn/ghostscript-wasm",
-  "version": "0.0.2",
+  "name": "ghostscript-wasm-esm",
+  "version": "1.0.1",
   "description": "ghostscript compiled to WASM",
-  "main": "gs.js",
+  "main": "gs.mjs",
   "module": "gs.mjs",
+  "types": "gs.d.ts",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha.js tests"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsscheller/ghostscript-wasm.git"
+    "url": "https://github.com/sharevb/ghostscript-wasm-esm.git"
   },
   "license": "AGPL-3.0",
+  "dependencies": {
+    "@types/emscripten": "^1.39.10"
+  },
   "devDependencies": {
     "mocha": "^10.0.0"
-  },
-  "dependencies": {}
+  }
 }

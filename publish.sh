@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
-cp js/gs.mjs dist/
+cp js/gs.d.ts dist/
 cp js/browser.js dist/
 cp package.json dist/
 cp README.md dist/
